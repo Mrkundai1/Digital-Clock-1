@@ -68,11 +68,7 @@ void drawDots() {
 void drawDate() {
   String theDate = "";
   textSize(50);
-  for (int i = 0; i < drops.length; i++) {
-  drops[i].show();
-  drops[i].fall();
- }
-  
+ 
 if (day() < 10) { theDate = theDate + "0"; }
   
   theDate = theDate + day();
@@ -96,9 +92,9 @@ void draw() {
   textAlign(CENTER);
   
   if (numClicks == 0) {
-    drawDate(); } 
+    drawTime(); } 
   else if (numClicks == 1) {
-    drawTime();
+    drawDate();
     }  
    else if (numClicks == 2) {
      drawDots();
